@@ -13,7 +13,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 
@@ -282,9 +281,8 @@ input[type="color"] {
 
 @media (max-width: 480px) {
     body {
-    background-size: auto 100%;
+    background-size: cover;
     background-position: center top;
-    background-color: #07111f;
   }
   .card { padding: 22px; }
 }
