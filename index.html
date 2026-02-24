@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Premium Form</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <input type="radio" name="tab" id="infoTab"checked>
+        <input type="radio" name="tab" id="funTab" >
+
+        <div class="tabs-wrap">
+          <div class="tabs">
+            <label class="tab-label" for="funTab">
+              <span>About You</span>
+            </label>
+            <label class="tab-label" for="infoTab">
+              <span>Hey</span>
+            </label>
+            <div class="tab-slider"></div>
+          </div>
+        </div>
+
+        <div class="forms">
+          <form id="funForm" class="form">
+            <div class="form-header">
+              <h2 class="form-title">Let's know you better</h2>
+            </div>
+
+            <div class="input-group">
+              <input type="text" id="fullname" name="fullname" placeholder=" " required>
+              <label for="fullname">Full Name</label>
+            </div>
+            
+            <div class="input-group">
+              <input type="text" id="nickname" name="nickname" placeholder=" " required>
+              <label for="nickname">Nickname</label>
+            </div>
+
+            <div class="row">
+              <div class="field-wrap">
+                <label>Birthday</label>
+                <input type="date">
+              </div>
+              <div class="field-wrap">
+                <label>Favorite Color</label>
+                <input type="color" value="#22475e">
+              </div>
+            </div>
+
+            <div class="section-title">Preferences</div>
+
+            <div class="field-check">
+              <label class="label-title">Favorite Animal</label>
+              <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="animal"> <span>Dog</span></label>
+                <label class="radio-item"><input type="radio" name="animal" checked> <span>Cat</span></label>
+                <label class="radio-item"><input type="radio" name="animal"> <span>Bird</span></label>
+              </div>
+            </div>
+
+            <div class="field-check">
+              <label class="label-title">Hobbies</label>
+              <div class="check-group">
+                <label class="check-item"><input type="checkbox" name="hobbies" value="dance"> <span>Cooking</span></label>
+                <label class="check-item"><input type="checkbox" name="hobbies" value="draw"> <span>Drawing</span></label>
+                <label class="check-item"><input type="checkbox" name="hobbies" value="gaming"> <span>Gaming</span></label>
+              </div>
+            </div>
+
+            <div class="file-upload">
+              <input type="file" id="avatar" name="avatar" accept="image/*">
+              <label for="avatar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                Upload Profile Picture
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary">Save Profile <span>❤️</span></button>
+          </form>
+
+          <form id="infoForm" class="form">
+            <div class="form-header">
+              <h2 class="form-title">Welcome Back</h2>
+            </div>
+
+            <div class="input-group">
+              <input type="email" id="email" name="email" placeholder=" ">
+              <label for="email">Email Address</label>
+            </div>
+
+            <div class="input-group">
+              <input type="password" id="psw" name="psw" placeholder=" ">
+              <label for="psw">Secret Key</label>
+            </div>
+
+            <button type="submit" class="btn-primary">Send Info <span>^^</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
