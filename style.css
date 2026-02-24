@@ -1,13 +1,18 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  min-height: 100vh;
+  min-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   background: #07111f;
+
+  background: url("ramadan.png");
+  background-size: cover;
 }
+
+
 
 .wrap {
    width: 100%; 
@@ -15,12 +20,12 @@ body {
 }
 
 .card {
-  background: rgba(10, 20, 40, 0.7);
+  background: rgba(7, 17, 31, 0.75);
   backdrop-filter: blur(20px);
   border: 1px solid #d4af372e;
   border-radius: 28px;
   padding: 32px;
-  box-shadow: 0 16px 80px #d4af374e;
+  box-shadow: 0 20px 60px #d4af374e;
 }
 
 input[name="tab"] { 
