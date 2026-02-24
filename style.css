@@ -8,7 +8,7 @@ body {
   padding: 20px;
   background: #07111f;
 
-  background: url("ramadan.png");
+  background: url("ramadan.png") no-repeat center;
   background-size: cover;
 }
 
