@@ -1,15 +1,19 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  min-height: 100px;
+  margin: 0%;
+  min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   background: #07111f;
 
-  background: url("ramadan.png") no-repeat center;
+  background: url("ramadan.png");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+  background-attachment: fixed ;
 }
 
 
