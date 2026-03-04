@@ -4,88 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script></body>
     <title>Premium Form</title>
   </head>
   <body>
-    <div class="wrap">
+
+    <div class="page active" id="formPage">
       <div class="card">
-        <input type="radio" name="tab" id="infoTab"checked>
-        <input type="radio" name="tab" id="funTab" >
-
-        <div class="tabs-wrap">
-          <div class="tabs">
-            <label class="tab-label" for="funTab">
-              <span>About You</span>
-            </label>
-            <label class="tab-label" for="infoTab">
-              <span>Hey</span>
-            </label>
-            <div class="tab-slider"></div>
-          </div>
-        </div>
-
         <div class="forms">
-          <form id="funForm" class="form">
-            <div class="form-header">
-              <h2 class="form-title">Let's know you better</h2>
-            </div>
+          <form id="formAll" class="form" onsubmit="return false;">
+            <h2 class="form-title">Create your profile</h2>
 
             <div class="input-group">
               <input type="text" id="fullname" name="fullname" placeholder=" " required>
               <label for="fullname">Full Name</label>
             </div>
-            
+
             <div class="input-group">
-              <input type="text" id="nickname" name="nickname" placeholder=" " required>
-              <label for="nickname">Nickname</label>
+              <input type="text" id="username" name="username" placeholder=" " required>
+              <label for="username">Username</label>
+            </div>
+
+            <div class="input-group">
+              <input type="tel" id="telephone" name="telephone" placeholder=" ">
+              <label for="telephone">Phone</label>
             </div>
 
             <div class="row">
               <div class="field-wrap">
-                <label>Birthday</label>
-                <input type="date">
+                <label for="birthday">Birthday</label>
+                <input type="date" id="birthday" name="birthday">
               </div>
               <div class="field-wrap">
-                <label>Favorite Color</label>
-                <input type="color" value="#22475e">
+                <label for="favcolor">Favorite Color</label>
+                <input type="color" id="favcolor" name="favcolor" value="#d4af37">
               </div>
             </div>
 
-            <div class="section-title">Preferences</div>
-
-            <div class="field-check">
-              <label class="label-title">Favorite Animal</label>
-              <div class="radio-group">
-                <label class="radio-item"><input type="radio" name="animal"> <span>Dog</span></label>
-                <label class="radio-item"><input type="radio" name="animal" checked> <span>Cat</span></label>
-                <label class="radio-item"><input type="radio" name="animal"> <span>Bird</span></label>
-              </div>
+            <div class="field-wrap">
+              <label for="country">Country</label>
+              <select class="styled-select" id="country" name="country">
+                <option value="">Select</option>
+                <option>Algeria</option><option>Morocco</option><option>Tunisia</option>
+                <option>Egypt</option><option>Saudi Arabia</option><option>UAE</option>
+                <option>Turkey</option><option>Indonesia</option><option>Pakistan</option>
+                <option>Other</option>
+              </select>
             </div>
 
-            <div class="field-check">
-              <label class="label-title">Hobbies</label>
-              <div class="check-group">
-                <label class="check-item"><input type="checkbox" name="hobbies" value="dance"> <span>Cooking</span></label>
-                <label class="check-item"><input type="checkbox" name="hobbies" value="draw"> <span>Drawing</span></label>
-                <label class="check-item"><input type="checkbox" name="hobbies" value="gaming"> <span>Gaming</span></label>
-              </div>
-            </div>
-
-            <div class="file-upload">
-              <input type="file" id="avatar" name="avatar" accept="image/*">
-              <label for="avatar">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-                Upload Profile Picture
-              </label>
-            </div>
-
-            <button type="submit" class="btn-primary">Save Profile <span>❤️</span></button>
-          </form>
-
-          <form id="infoForm" class="form">
-            <div class="form-header">
-              <h2 class="form-title">Welcome Back</h2>
-            </div>
+            <div class="section-title">Account</div>
 
             <div class="input-group">
               <input type="email" id="email" name="email" placeholder=" ">
@@ -94,13 +61,134 @@
 
             <div class="input-group">
               <input type="password" id="psw" name="psw" placeholder=" ">
-              <label for="psw">Secret Key</label>
+              <label for="psw">Password</label>
             </div>
 
-            <button type="submit" class="btn-primary">Send Info <span>^^</span></button>
+
+            <div class="range-wrap">
+              <span class="label-title">Ramadan Spirit Level</span>
+              <div class="range-row">
+                <input type="range" id="spirit" min="0" max="100" value="80" oninput="document.getElementById('spiritVal').textContent=value">
+                <span class="range-val" id="spiritVal">80</span>
+              </div>
+            </div>
+
+            <div class="section-title">Preferences</div>
+
+            <div class="field-check">
+              <label class="label-title">Favorite Animal</label>
+              <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="animal" value="Dog"> <span>Dog</span></label>
+                <label class="radio-item"><input type="radio" name="animal" value="Cat" checked> <span>Cat</span></label>
+                <label class="radio-item"><input type="radio" name="animal" value="Bird"> <span>Bird</span></label>
+              </div>
+            </div>
+            <div class="field-check">
+              <label class="label-title">Hobbies</label>
+              <div class="check-group">
+                <label class="check-item"><input type="checkbox" name="hobbies" value="Cooking"> <span>Cooking</span></label>
+                <label class="check-item"><input type="checkbox" name="hobbies" value="Drawing"> <span>Drawing</span></label>
+                <label class="check-item"><input type="checkbox" name="hobbies" value="Gaming"> <span>Gaming</span></label>
+              </div>
+            </div>
+
+            <div class="file-upload">
+              <input type="file" id="avatar" name="avatar" accept="image/*" onchange="previewImg(this)">
+              <label for="avatar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                Upload Profile Picture
+              </label>
+              <img class="preview" id="avatarPreview" alt="avatar preview">
+            </div>
+
+            <button class="btn-primary" type="button" onclick="submitForm()">
+              Create Profile <span>^^</span>
+            </button>
           </form>
         </div>
       </div>
     </div>
+
+
+
+
+    <div class="page" id="profilePage">
+    <div class="profile-shell">
+
+      <header class="profile-header">
+
+        <div class="pic-wrap">
+          <img class="pic" id="profilePic" alt="Profile picture">
+          <div class="pic-fallback" id="profilePicFallback" aria-hidden="true"></div>
+        </div>
+        <h1 id="pName">—</h1>
+        <p id="pNick">—</p>
+      </header>
+
+      <section class="profile-section">
+        <h2>Profile</h2>
+        <div class="p-cards">
+          <article class="p-card">
+            <div class="p-card-content">
+              <h3>Username</h3>
+              <p id="pUsername">—</p>
+            </div>
+          </article>
+          <article class="p-card">
+            <div class="p-card-content">
+              <h3>Phone</h3>
+              <p id="pPhone">—</p>
+            </div>
+          </article>
+          <article class="p-card">
+            <div class="p-card-content">
+              <h3>Birthday</h3>
+              <p id="pBirthday">—</p>
+            </div>
+          </article>
+          <article class="p-card">
+            <div class="p-card-content">
+              <h3>Country</h3>
+              <p id="pCountry">—</p>
+            </div>
+          </article>
+          <article class="p-card">
+            <div class="p-card-content">
+              <h3>Favorite Color</h3>
+              <p id="pColor">—</p>
+            </div>
+          </article>
+          <article class="p-card">
+            <div class="p-card-content">
+              <h3>Animal</h3>
+              <p id="pAnimal">—</p>
+            </div>
+          </article>
+          <article class="p-card">
+            <div class="p-card-content">
+              <h3>Email</h3>
+              <p id="pEmail">—</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="profile-section">
+        <h2>Interests</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-label">Hobbies</span>
+            <span class="contact-value tag-list" id="pHobbies">—</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Spirit</span>
+            <span class="contact-value" id="pSpiritTxt">80 / 100</span>
+          </div>
+        </div>
+
+          <button class="btn-back" type="button" onclick="location.reload()">Start over</button>
+      </section>
+    </div>
+  </div>
   </body>
 </html>
